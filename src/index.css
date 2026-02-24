@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* THE STICKY FOOTER FIX */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* This pushes the footer down by allowing the main wrapper to grow */
+.home-wrapper, 
+.admin-container, 
+.about-wrapper, 
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+/* Prevents white space caused by margin collapsing between sections */
+section {
+  display: flow-root;
+}

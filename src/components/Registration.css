@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Page Background */
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(120deg, #ffffff 50%, #000000 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Wrapper */
+.form-wrapper {
+  width: 900px;
+  max-width: 95%;
+  height: 520px;
+  background: #fff;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
+}
+
+/* Image Section */
+.image-section {
+  width: 40%;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%);
+}
+
+/* Form Section */
+.form-section {
+  width: 60%;
+  padding: 50px;
+}
+
+.form-section h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 28px;
+}
+
+/* Inputs */
+.input-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+textarea {
+  resize: none;
+  height: 90px;
+  margin-bottom: 20px;
+}
+.login-text {
+  margin-top: 22px;
+  font-size: 14px;
+  text-align: center;
+  color: #444;
+}
+
+.login-text a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+.login-text a:hover {
+  opacity: 0.7;
+}
+.register-regbtn {
+  width: 100%;
+  padding: 14px;
+  background: #000;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-regbtn:hover {
+  background: #1a1a1a;
+  color: white;
+
+}
+
+/* Login Link Text */
+  
+  button {
+    padding: 12px 30px;
+    background: black;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background:rgb(26, 25, 25);
+    color: white;
+  }
+  

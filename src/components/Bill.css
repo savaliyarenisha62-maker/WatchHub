@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+/* CONTAINER */
+.bill-container-modern {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Outfit", sans-serif;
+}
+
+/* CARD */
+.bill-card-premium {
+  background: #fff;
+  width: 100%;
+  max-width: 720px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* SUCCESS */
+.success-banner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f6fff9;
+  color: #2e7d32;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+
+/* HEADER */
+.bill-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.brand-logo {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.order-tag {
+  font-size: 14px;
+  color: #555;
+}
+
+/* CLIENT INFO */
+.bill-client-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px dashed #000;
+}
+
+.info-column label {
+  font-size: 13px;
+  color: #777;
+}
+
+.info-column h3 {
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+.info-column p {
+  font-size: 14px;
+  margin: 2px 0;
+}
+
+/* TABLE HEADER */
+.bill-table-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  border-bottom: 1px solid #000;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+
+/* ITEMS */
+.item-row-luxury {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.item-name {
+  font-size: 15px;
+}
+
+.item-qty {
+  font-size: 13px;
+  color: #777;
+}
+
+.item-total {
+  font-size: 15px;
+}
+
+/* TOTAL */
+.bill-final-calc {
+  margin-top: 12px;
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.total-highlight {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #000;
+}
+
+.total-highlight h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* ACTIONS */
+.bill-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 1px solid #ccc;
+  background: #000;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* PRINT */
+@media print {
+  .bill-actions {
+    display: none;
+  }
+
+  .bill-card-premium {
+    border: none;
+    box-shadow: none;
+  }
+}

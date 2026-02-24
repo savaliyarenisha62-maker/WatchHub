@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&display=swap');
+
+.hero-section {
+  width: 100%;
+  height: 85vh;
+  background: black;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Subtle Progress Bar */
+.nav-timer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: #98805a;
+  animation: timerProgress 5s linear forwards;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+/* CONTENT BOX - Small Fonts & Spacing */
+.content-box {
+  flex: 1.2;
+  z-index: 5;
+}
+
+.meta-tag {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #cfa45d;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 12px;
+  animation: slideInFade 0.8s ease forwards;
+}
+
+.hero-heading {
+  font-size: 52px; /* Smaller, more controlled size */
+  font-weight: 200;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  animation: slideInFade 1s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.hero-subtext {
+  font-size: 14px; /* Refined small size */
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.8;
+  max-width: 380px;
+  margin-bottom: 40px;
+  animation: slideInFade 1s ease 0.4s forwards;
+  opacity: 0;
+}
+
+/* LUXURY BUTTON */
+.action-area {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: slideInFade 1s ease 0.6s forwards;
+  opacity: 0;
+}
+
+.btn-luxury {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-luxury:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+.slide-counter {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 2px;
+}
+
+/* PRODUCT DISPLAY */
+.product-display {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.glow-backdrop {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(207, 164, 93, 0.08) 0%, transparent 70%);
+  z-index: 1;
+}
+
+.hero-product-img {
+  width: 78%;
+  height: auto;
+  z-index: 2;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.8));
+  animation: floatProduct 6s ease-in-out infinite;
+}
+
+/* ANIMATIONS */
+@keyframes slideInFade {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes floatProduct {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.02); }
+}
+
+@keyframes timerProgress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* Responsive Fix */
+@media (max-width: 800px) {
+  .hero-inner { flex-direction: column; text-align: center; }
+  .hero-heading { font-size: 40px; }
+  .hero-subtext { margin: 0 auto 30px auto; }
+  .action-area { justify-content: center; }
+}

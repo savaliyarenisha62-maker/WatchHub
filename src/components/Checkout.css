@@ -1,0 +1,231 @@
+:root {
+  --noir: #000000;
+  --ghost-white: #ffffff;
+  --ash: #888888;
+  --soft-border: #e8e8e8;
+}
+
+.checkout-page {
+  background-color: var(--ghost-white);
+  min-height: 100vh;
+  padding: 60px 5%;
+  font-family: 'Outfit', sans-serif;
+}
+
+.checkout-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 100px;
+  /* CRITICAL: Prevents sidebar from stretching to the full height of the left form */
+  align-items: start; 
+}
+
+/* --- LEFT SIDE: FORM --- */
+.checkout-form-section {
+  width: 100%;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  color: var(--ash);
+  transition: 0.3s;
+}
+
+.step-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--ash);
+  margin-bottom: 10px;
+}
+
+.checkout-header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  margin-top: 5px;
+  margin-bottom: 60px;
+}
+
+.noir-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.noir-form label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--noir);
+}
+
+.noir-form input,
+.noir-form textarea {
+  padding: 18px;
+  border: 1px solid var(--soft-border);
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  outline: none;
+  background-color: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.noir-form input:focus,
+.noir-form textarea:focus {
+  border-color: var(--noir);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.payment-method-box {
+  margin: 40px 0;
+  padding: 25px;
+  border: 1px solid var(--noir);
+  background: #fafafa;
+}
+
+.payment-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.place-order-btn {
+  width: 100%;
+  background: var(--noir);
+  color: white;
+  padding: 22px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+/* --- RIGHT SIDE: FIXED SIDEBAR --- */
+.order-summary-section {
+  position: sticky;
+  top: 40px; /* Locked 40px from the top of the window */
+  height: auto; 
+  z-index: 10;
+}
+
+.summary-box-noir {
+  background: #fcfcfc;
+  border: 1px solid var(--soft-border);
+  padding: 35px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.summary-box-noir h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--soft-border);
+  padding-bottom: 10px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.summary-img-mini {
+  width: 55px;
+  height: 55px;
+  background: white;
+  border: 1px solid #eee;
+  flex: 0 0 55px;
+  display: flex;
+  align-items: center;   
+  justify-content: center;
+}
+
+.summary-img-mini img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+.summary-item-name {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.summary-item-qty {
+  font-size: 11px;
+  color: var(--ash);
+  margin: 0;
+}
+
+.summary-item-price {
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.final-bill {
+  margin-top: 25px;
+  border-top: 1px solid var(--soft-border);
+  padding-top: 20px;
+}
+
+.bill-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.bill-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--noir);
+  border-top: 1px solid var(--noir);
+  padding-top: 15px;
+}
+
+@media (max-width: 1100px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .order-summary-section {
+    position: relative;
+    top: 0;
+    order: -1;
+  }
+}
