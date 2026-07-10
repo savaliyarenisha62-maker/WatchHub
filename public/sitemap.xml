@@ -1,44 +1,18 @@
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://watch-hub-wheat.vercel.app/</loc>
   </url>
-
   <url>
     <loc>https://watch-hub-wheat.vercel.app/about</loc>
   </url>
-
   <url>
     <loc>https://watch-hub-wheat.vercel.app/contact</loc>
   </url>
-
   <url>
     <loc>https://watch-hub-wheat.vercel.app/category</loc>
   </url>
-
   <url>
     <loc>https://watch-hub-wheat.vercel.app/product</loc>
   </url>
-
-  <url>
-    <loc>https://watch-hub-wheat.vercel.app/cart</loc>
-  </url>
-
-  <url>
-    <loc>https://watch-hub-wheat.vercel.app/checkout</loc>
-  </url>
-
-  <url>
-    <loc>https://watch-hub-wheat.vercel.app/orders</loc>
-  </url>
-
-  <url>
-    <loc>https://watch-hub-wheat.vercel.app/login</loc>
-  </url>
-
-  <url>
-    <loc>https://watch-hub-wheat.vercel.app/registration</loc>
-  </url>
-
 </urlset>
